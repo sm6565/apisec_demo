@@ -10,7 +10,7 @@ pipeline {
             echo "$CONSOLE"
             curl -k -u "$USER":"$PASS" $CONSOLE/api/v1/util/twistcli --output ./twistcli 
             chmod a+x ./twistcli
-            ./twistcli waas openapi-scan  --address "$CONSOLE" --user "$USER"  --password "$PASS" uber.yml
+            ./twistcli waas openapi-scan  --address "$CONSOLE" --user "$USER"  --password "$PASS" uber.yaml
             '''
       }
             }
